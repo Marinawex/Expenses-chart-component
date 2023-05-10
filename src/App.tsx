@@ -22,7 +22,7 @@ function App() {
   const spendingByDaysList = daysObj.map((dayObj) => {
   
     const dayColor = currentDay === dayObj.day ? 'cayn' : 'red';
-    return ( <div key={dayObj.day}><div className='container'><div className={`amount ${dayColor}`} style={{height:`${dayObj.amount}%`}}>{dayObj.amount}</div></div> <div className='day'>{dayObj.day}</div> </div>)
+    return ( <div key={dayObj.day}><div className='container'><div className={`amount ${dayColor}`} style={{height:`${dayObj.amount}%`}} onMouseEnter={()=>console.log(dayObj.amount)}>{dayObj.amount}</div></div> <div className='day'>{dayObj.day}</div> </div>)
   })
   
  
@@ -51,7 +51,7 @@ console.log((currentDay))
 
 <div className='total'>
   <div className='month-total'>
-    <h3>Total this month</h3>
+    <span>Total this month</span>
     ${monthTotal}
 </div>
 <div>

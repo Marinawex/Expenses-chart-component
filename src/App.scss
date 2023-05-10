@@ -12,16 +12,27 @@ $Very-pale-orange: hsl(33, 100%, 98%);
 
 
 
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+ 
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+      }
+    
   
     font-family: $DM-Sans, sans-serif ;
     font-weight: 400;
     font-size: 18px;
-    color:$Dark-brown;
 
     Background-color: $Cream;
     color: $Medium-brown;
@@ -37,55 +48,41 @@ body {
    margin: 2rem;
     padding: 1.5rem;
     padding-top: 1.1rem;
-    // max-width: 50%;
-    // max-height: 50%;
     display: flex;
- 
     justify-content: space-between;
-
-   
-
+    line-height: 0.9;
    
     .h2{
        color: white; 
-       font-weight: 100;
-       flex-direction: column;
-       margin-left: 0%;
-      
-     
+       flex-direction: column;     
 
        h2{
-        font-weight: 100;
+        font-weight: 400;
         font-size:large;
+        
        }
 
        .total-balance{
         font-size:xx-large;
-        font-weight: 500;
-
+        font-weight: 700;
        }
     }
 
     .circles-container{
-    
+   
+    height: 40px;
+    width: 75px;
    
     .circle{
         background-color: black;
         border-radius: 50%;
-        // min-width: 3rem;
-        // min-height: 3rem;
-        // size: 100px;
-        display: inline-block;
-        // margin:  3rem;
         padding: 1.5rem;
    
-       
     }
 
     .black{
     position: absolute;
-    margin-left: 1.5rem;
-    // right: 40%;
+    margin-left: 1.4rem;
 
     }
 
@@ -93,8 +90,7 @@ body {
         background-color: transparent;
         border: 2px solid white;
         position: absolute;
-     
-        // right: 45%;
+        padding: 1.4rem;
         z-index: 3;
         
      
@@ -102,9 +98,6 @@ body {
 
 }
 }
-
-
-
 
 .spending{
     height: 100%;
@@ -117,90 +110,51 @@ body {
    flex-direction:column ;
 
    h1{
-    font-weight: 400;
+    font-weight: 700;
     color: $Dark-brown;
    }
 
 
-
-    // .spending-week{
-    
-    // border: 10 px solid green;
-    // flex-grow: 4;
-  
-
     .spending-week{
     display: flex;
-    list-style: none;
     flex-grow: 3;
     padding-bottom: 4rem;
     
    
-
-    // align-content: space-between;
-    // justify-items: flex-start;
-    // border: 10 px solid green;
-    
-
     .container{
         margin: 0.4rem;
         color: $Medium-brown;
-    //    border: 10px solid darkgreen;
        height: 100%;
-       align-self: flex-end;
        display: flex;
-       padding-top: 0%;
-       
-
-    
-      
-
-       .day{
-        color:$Cyan;
-    }
-       
-    
-
-
-        // .container{
-          
-
-
+     
             .red{
                 background-color: $Soft-red;
                 align-self: flex-end;
            
-
-           
             }
-    
             .cayn{
                 background-color: $Cyan;
                 align-self: flex-end;
                
     
             }
-
-    
         .amount{
             color: transparent;
             border-radius: 0.2rem;
-          
-      
-        // }
+
+    }
+
+
+    .day{
+        
     }
 
 
    
     }
-// }
+
 
 }
-    // max-width: 50%;
-    // max-height: 50%;
-   
-
-
 
     .total{
         color: $Medium-brown;
@@ -212,29 +166,31 @@ body {
   
         flex-grow: 1;
         border-top: 1px solid $Medium-brown;
-        // justify-self: flex-end;
-        
+     
         
 
         .month-total{
             font-size: xx-large;
             color: $Dark-brown;
+            display: flex;
+            flex-direction: column;
       
         
         }
 
-        h3{
+        span{
             font-size: medium;
-            font-weight: 100;
+            font-weight: 400;
+            line-height: 1;
+            color: $Medium-brown;
 
         }
 
         .stat{
-           
             display: flex;
             flex-direction: column;
             font-size: medium;
-            font-weight: 100;
+            font-weight: 400;
             justify-self: flex-end;
            
 
